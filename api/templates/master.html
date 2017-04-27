@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>View on WhenHub</title>
+    <title>WhenHub + Github Timeline Viewer</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
@@ -24,10 +24,7 @@
   </head>
 
   <body>
-
-    <div class="jumbotron" style="padding-top:0px !important;padding-bottom:0px !important;margin-bottom: 0px !important; background-color: #FFFFFF !important">
-        <span style="font-size: 30px;">WhenHub + Github Timeline Viewer</span>
-        <div class="btn-group btn-group-lg" role="group" aria-label="Large button group" style="float:right;">
+        <div class="footer btn-group btn-group-xs" role="group" aria-label="Large button group" style="position: fixed; right: 1px; z-index: 1030;bottom: 38px;">
           <button id="go_to_vertical" type="button" class="btn btn-default {% block vertical_selected %}{% endblock vertical_selected %}">
             <img src='/static/vertical-timeline-multimedia-overview.png' width='75' height='75'><br>
             Vertical
@@ -37,8 +34,6 @@
             Horizontal
           </button>
         </div>
-        </p>
-    </div>
 
       {% block whenhub_timeline %}{% endblock whenhub_timeline %}
 
@@ -54,6 +49,9 @@
           $("#go_to_horizontal").click(function(){
               window.location.href="/render_widget?schedule_id={{schedule_id}}&timeline_version=horizontal";
           });
+        setInterval(function(){
+          $(".whencast-player").css("min-height", $(window).height()+"px");
+        }, 300);
       });
     </script>
   </body>
