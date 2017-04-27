@@ -1,8 +1,3 @@
-import os
-os.environ['DJANGO_SETTINGS_MODULE'] = 'hackathon.settings'
-import hackathon.settings
-import django
-django.setup()
 from bs4 import BeautifulSoup
 
 import json
@@ -62,4 +57,3 @@ def parse_github_url(url):
 
     return final_results
 
-github_data = parse_github_url("https://raw.githubusercontent.com/emeth-/the-flow/master/mary_perpetual_virginity.md")

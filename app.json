@@ -1,6 +1,7 @@
 {
   "env": {
-    "IS_HEROKU_SERVER": "1"
+    "IS_HEROKU_SERVER": "1",
+    "WHENHUB_ACCESS_TOKEN": ""
   },
   "addons": [
     "papertrail",
