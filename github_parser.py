@@ -17,8 +17,11 @@ def expand_year(year):
 def parse_github_url(url):
     final_results = {
         "schedule": {
+            "calendar": {
+                "calendarType": "absolute"
+            },
             "name": "",
-            "scope": "public"
+            "scope": "public",
         },
         "events": []
     }
@@ -49,15 +52,10 @@ def parse_github_url(url):
                     "when": {
                       "period": "year",
                       "startDate": expanded_year,
-                      "endDate": expanded_year,
+                      "endDate": None,
                     },
                     "name": full_summary_clause,
               "description": full_description,
-              "icon": "https://upload.wikimedia.org/wikipedia/commons/4/49/Codex_Tchacos_p33.jpg",
-              "resources": [
-                "https://en.wikipedia.org/wiki/Gospel_of_James",
-                "https://upload.wikimedia.org/wikipedia/commons/4/49/Codex_Tchacos_p33.jpg"
-              ],
               "customFieldData": {"opinion": opinion},
             })
 
