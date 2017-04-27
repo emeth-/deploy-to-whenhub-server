@@ -25,11 +25,11 @@
 
   <body>
         <div class="footer btn-group btn-group-xs" role="group" aria-label="Large button group" style="position: fixed; right: 1px; z-index: 1030;bottom: 38px;">
-          <button id="go_to_vertical" type="button" class="btn btn-default {% block vertical_selected %}{% endblock vertical_selected %}">
+          <button id="go_to_vertical" type="button" class="btn btn-default" style="{% block vertical_inactive %}{% endblock vertical_inactive %}">
             <img src='/static/vertical-timeline-multimedia-overview.png' width='75' height='75'><br>
             Vertical
           </button>
-          <button id="go_to_horizontal" type="button" class="btn btn-default {% block horizontal_selected %}{% endblock horizontal_selected %}">
+          <button id="go_to_horizontal" type="button" class="btn btn-default" style="{% block horizontal_inactive %}{% endblock horizontal_inactive %}">
             <img src='/static/horizontal-timeline-overview.png' width='75' height='75'><br>
             Horizontal
           </button>
