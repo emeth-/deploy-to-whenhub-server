@@ -18,6 +18,8 @@ def load_frontend(request):
     return HttpResponseRedirect("/static/index.html")
 
 def load_widget(request):
+    print "*****", request.META.get('HTTP_REFERER')
+    print request.META
     return TemplateResponse(request, 'load_widget.html', context={
         "users": []
     })
