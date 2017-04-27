@@ -32,18 +32,18 @@ def parse_github_url(url):
 
     for detail_block in soup.findAll('details'):
         for summary_block in detail_block.findAll('summary'):
-            summary_block_text = summary_block.text
-            if '|' in summary_block_text:
+            if '|' in summary_block.text:
                 #valid block!
-                summary_block_pieces = summary_block_text.split('|')
-                year = summary_block_pieces[0].strip().split(' ')[0].strip().replace('~', '')
+                summary_block_text_pieces = summary_block.text.split('|')
+                summary_block_html_pieces = str(summary_block).split('|')
+                year = summary_block_text_pieces[0].strip().split(' ')[0].strip().replace('~', '')
                 expanded_year = expand_year(year)
-                full_summary_clause = summary_block_pieces[1].strip()
+                full_summary_clause = summary_block_html_pieces[1].strip()
                 who = full_summary_clause.split(':')[0].strip()
                 opinion = full_summary_clause.split(':')[1].strip().split(',')[0].strip()
                 full_description = ""
                 for detail_block in detail_block.findAll('blockquote'):
-                    full_description = detail_block.text
+                    full_description = str(detail_block)
 
                 final_results['events'].append({
                     "when": {
