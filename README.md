@@ -14,7 +14,7 @@ Hackathon-kit
 ```
 <clone our app to a local git repository>
 $ sudo pip install -r requirements.txt
-$ heroku apps:create hackathon-demo 
+$ heroku apps:create hackathon-demo
 $ heroku config:set IS_HEROKU_SERVER=1
 $ git push heroku master
 ```
@@ -42,3 +42,6 @@ Create a superuser
 $ python manage.py createsuperuser
 Visit http://127.0.0.1:8000/admin/
 ```
+
+Follow directions here to get WhenHub access token, then input as environmental variable on Heroku setup screen:
+https://developer.whenhub.com/docs/connecting-to-the-api
