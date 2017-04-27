@@ -54,10 +54,10 @@ def parse_github_url(url):
                       "startDate": expanded_year,
                       "endDate": None,
                     },
-                    "name": full_summary_clause,
-              "description": full_description,
-              "customFieldData": {"opinion": opinion},
-            })
+                    "name": full_summary_clause.split(",")[0],
+                    "description": full_description,
+                    "customFieldData": {"opinion": opinion},
+                  })
 
 
     return final_results
