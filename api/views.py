@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 from django.template.response import TemplateResponse
 import github_parser
 import whenhub_api
+import os
 
 def json_custom_parser(obj):
     if isinstance(obj, datetime.datetime) or isinstance(obj, datetime.date):
@@ -21,6 +22,9 @@ def load_frontend(request):
 
 def load_widget(request):
     refer = request.META.get('HTTP_REFERER')
+    if not os.environ.get('IS_HEROKU_SERVER', False):
+        #local development server, use this test data
+        refer = "https://github.com/emeth-/the-flow/blob/master/mary_perpetual_virginity.md"
     if not refer:
         return TemplateResponse(request, 'error.html', context={
             "error": "Referred not detected."
@@ -33,10 +37,28 @@ def load_widget(request):
     refer = refer.replace('github.com', 'raw.githubusercontent.com')
     #refer = https://raw.githubusercontent.com/emeth-/the-flow/master/mary_perpetual_virginity.md
 
+    return TemplateResponse(request, 'load_widget.html', context={
+        "refer": refer
+    })
+
+def create_whenhub(request):
+    refer = request.POST['refer']
     github_data = github_parser.parse_github_url(refer)
     schedule_id = whenhub_api.create_widget(github_data)
+    return HttpResponse(json.dumps({
+        "schedule_id": schedule_id
+    }, default=json_custom_parser), content_type='application/json', status=200)
 
-    return TemplateResponse(request, 'horizontal_timeline.html', context={
+def render_widget(request):
+    schedule_id = request.GET['schedule_id']
+    timeline_version = request.GET['timeline_version']
+
+    if timeline_version == "horizontal":
+        template_file = 'horizontal_timeline.html'
+    else:
+        template_file = 'vertical_timeline.html'
+
+    return TemplateResponse(request, template_file, context={
         "schedule_id": schedule_id
     })
 
