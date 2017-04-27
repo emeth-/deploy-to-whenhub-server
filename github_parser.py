@@ -39,7 +39,7 @@ def parse_github_url(url):
                 year = summary_block_text_pieces[0].strip().split(' ')[0].strip().replace('~', '')
                 expanded_year = expand_year(year)
                 full_summary_clause = summary_block_html_pieces[1].strip()
-                who = full_summary_clause.split(':')[0].strip()
+                #who = full_summary_clause.split(':')[0].strip()
                 opinion = full_summary_clause.split(':')[1].strip().split(',')[0].strip()
                 full_description = ""
                 for detail_block in detail_block.findAll('blockquote'):
