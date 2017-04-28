@@ -5,7 +5,7 @@ Whenhub-Button-Server
 
 This server has been deployed at <a href='http://view-on-whenhub.herokuapp.com/'>view-on-whenhub.herokuapp.com</a>. Go there to get your button code, or alternatively follow the instructions at the bottom of this file to deploy your own server.
 
-Embed the button code in any markdown or html timeline document you have in github! Timeline must follow a specific format. You can form one of our example timelines in <a href='https://github.com/emeth-/whenhub-button-examples'>this repository</a> to get started.
+<b>Embed the button code in any markdown or html timeline you have in github!</b> Timeline must follow a specific format. You can form one of our example timelines in <a href='https://github.com/emeth-/whenhub-button-examples'>this repository</a> to get started.
 
 # Examples
 
