@@ -3,9 +3,9 @@ Whenhub-Button-Server
 
 # How to use button
 
-This server has been deployed at <a href='http://view-on-whenhub.herokuapp.com/'>view-on-whenhub.herokuapp.com</a>. Go there to get your button code, or alternatively follow the instructions at the bottom of this file to deploy your own server.
+<b>Embed the <a href='http://view-on-whenhub.herokuapp.com/'>button code</a> in any markdown or html timeline (following this <a href='https://github.com/emeth-/whenhub-button-server/blob/master/timeline_format.md'>specific format</a>) you have in GitHub!</b> When button is clicked by you or any visitor, a new WhenHub widget is dynamically created with your latest timeline, presenting your timeline in one of several different beautiful UI views!
 
-<b>Embed the button code in any markdown or html timeline you have in github!</b> Timeline must follow a <a href='https://github.com/emeth-/whenhub-button-server/blob/master/timeline_format.md'>specific format</a>. You can form one of our example timelines in <a href='https://github.com/emeth-/whenhub-button-examples'>this repository</a> to get started.
+You can form one of our example timelines in <a href='https://github.com/emeth-/whenhub-button-examples'>this repository</a> to get started.
 
 # Examples
 
@@ -13,9 +13,11 @@ Head over to <a href='https://github.com/emeth-/whenhub-button-examples'>this re
 
 # Deploy your own server
 
-Follow directions here to get WhenHub access token, then input as environmental variable on Heroku setup screen:
-https://developer.whenhub.com/docs/connecting-to-the-api
+This server has been deployed at <a href='http://view-on-whenhub.herokuapp.com/'>view-on-whenhub.herokuapp.com</a>. All examples assume use of that server. You may instead use the button below to deploy your own version of the server.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Note - on Heroku Deploy screen, you will need a WhenHub access token, which you can get <a href='https://developer.whenhub.com/docs/connecting-to-the-api'>here</a>.
+
 
 
