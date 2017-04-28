@@ -1,4 +1,4 @@
-<h1>[Timeline Title in h1 tag]</h1>
+<h1>[Timeline Title]</h1>
 
 <details>
   <summary>
