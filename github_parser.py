@@ -38,7 +38,10 @@ def parse_github_url(url):
                 expanded_year = expand_year(year)
                 full_summary_clause = summary_block_text_pieces[1].strip()
                 #who = full_summary_clause.split(':')[0].strip()
-                opinion = full_summary_clause.split(':')[1].strip().split(',')[0].strip()
+                try:
+                    opinion = full_summary_clause.split(':')[1].strip().split(',')[0].strip()
+                except:
+                    opinion = ""
                 full_description = ""
                 for detail_block in detail_block.findAll('blockquote'):
                     full_description = str(detail_block)
@@ -56,4 +59,3 @@ def parse_github_url(url):
 
 
     return final_results
-
