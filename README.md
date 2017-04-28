@@ -7,7 +7,8 @@ You can fork one of our example timelines in <a href='https://github.com/emeth-/
 
 # Examples
 
-Head over to <a href='https://github.com/emeth-/whenhub-button-examples'>this repository</a> to see examples of the timeline and button in action. Feel free to fork and customize to create your own examples.
+- <a href='https://github.com/emeth-/whenhub-button-examples/blob/master/flight_timeline.md'>Simple</a>
+- <a href='https://github.com/emeth-/whenhub-button-examples/blob/master/mary_perpetual_virginity.md'>Complex</a>
 
 # Deploy your own server
 
