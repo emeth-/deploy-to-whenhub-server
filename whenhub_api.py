@@ -4,10 +4,11 @@ import requests
 
 def create_widget(github_data):
 
+    print "***schedule data", github_data['schedule']
     resp = requests.post("https://api.whenhub.com/api/users/me/schedules?access_token="+hackathon.settings.WHENHUB_ACCESS_TOKEN, json=github_data['schedule'])
     schedule_data = resp.json()
 
-    print "schedule_data", schedule_data
+    print "***schedule response", schedule_data
 
     for event_data in github_data['events']:
         resp = requests.post("https://api.whenhub.com/api/schedules/"+schedule_data['id']+"/events?access_token="+hackathon.settings.WHENHUB_ACCESS_TOKEN, json=event_data)
