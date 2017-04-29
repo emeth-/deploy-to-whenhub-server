@@ -12,7 +12,7 @@ You can fork one of our example timelines in <a href='https://github.com/emeth-/
 
 # Deploy your own server
 
-This server has been deployed at <a href='http://view-on-whenhub.herokuapp.com/'>view-on-whenhub.herokuapp.com</a>. All examples assume use of that server. You may instead use the button below to deploy your own version of the server.
+This server has been deployed at <a href='http://view-on-whenhub.herokuapp.com/'>view-on-whenhub.herokuapp.com</a>. All examples assume use of that server. You may instead create your own server on Heroku using the button below.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
