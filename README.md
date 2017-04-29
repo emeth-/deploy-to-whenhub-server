@@ -1,4 +1,4 @@
-View On WhenHub Button
+Deploy To WhenHub Button
 ===========
 
 <b>Embed the <a href='http://view-on-whenhub.herokuapp.com/'>button code</a> in any markdown or html timeline (following this <a href='https://github.com/emeth-/whenhub-button-server/blob/master/timeline_format.md'>specific format</a>) you have in GitHub!</b> When button is clicked by you or any visitor, a new WhenHub widget is dynamically created with your latest timeline, presenting your timeline in one of several different beautiful UI views!
