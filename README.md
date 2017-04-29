@@ -10,13 +10,13 @@ You can fork one of our example timelines in <a href='https://github.com/emeth-/
 - <a href='https://github.com/emeth-/whenhub-button-examples/blob/master/flight_timeline.md'>Simple</a>
 - <a href='https://github.com/emeth-/whenhub-button-examples/blob/master/mary_perpetual_virginity.md'>Complex</a>
 
-# Deploy your own server
+# Don't want to use the demo server? Setup your own server below:
 
-This server has been deployed at <a href='http://view-on-whenhub.herokuapp.com/'>view-on-whenhub.herokuapp.com</a>. All examples assume use of that server. You may instead create your own server on Heroku using the button below.
+This server has been setup at <a href='http://view-on-whenhub.herokuapp.com/'>view-on-whenhub.herokuapp.com</a>. All examples assume use of that server. You may instead create your own server on Heroku using the button below.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Note - on Heroku Deploy screen, you will need a WhenHub access token, which you can get <a href='https://developer.whenhub.com/docs/connecting-to-the-api'>here</a>.
+Note - on Heroku Setup screen, you will need a WhenHub access token, which you can get <a href='https://developer.whenhub.com/docs/connecting-to-the-api'>here</a>.
 
 
 
